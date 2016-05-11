@@ -5,6 +5,11 @@ angular.module('yui', ['ui.router'])
     .state('explore', {
       url: '/explore',
       templateUrl: '../views/exploreTmpl.html'
+    })
+
+    .state('post', {
+      url: '/post',
+      templateUrl: '../views/postTmpl.html'
     });
 
     $urlRouterProvider

@@ -47,3 +47,25 @@ INTRO
   background-image: url("https://images.unsplash.com/photo-1458532239918-14dabba19de5?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=3497ccbd61aa32beffa3eab734e8d812");
   background-size: cover;
 }
+
+/*************
+
+IMAGE FLOW
+
+**************/
+
+.image-flow-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-flow {
+  height: 35vh;
+  margin: 0;
+  padding: 0;
+  margin-bottom: -2px;
+}
+
+.image-flow:hover {
+  opacity: .4;
+}

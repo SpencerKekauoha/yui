@@ -20,4 +20,14 @@ angular.module('yui').service('mainService', function($http){
     });
   };
 
+  this.getImageId = function(image){
+    return $http({
+      method: 'GET',
+      url: '/api/images/' + image,
+      data: image
+    }).then(function(response){
+      return response.data;
+    });
+  };
+
 });

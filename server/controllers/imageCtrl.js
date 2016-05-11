@@ -22,6 +22,17 @@ module.exports = {
           res.status(200).json(response);
         }
       });
+  },
+
+  imageIdRead: function(req, res, next){
+    Image.findById(req.params.id)
+      .exec(function(err, response){
+        if(err){
+          res.status(500).json(err);
+        } else {
+          res.status(200).json(response);
+        }
+      });
   }
 
 };

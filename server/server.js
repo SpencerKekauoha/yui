@@ -12,6 +12,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.get('/api/images', imageCtrl.imageRead);
 app.post('/api/images', imageCtrl.imageCreate);
+app.get('/api/images/:id', imageCtrl.imageIdRead);
 
 
 

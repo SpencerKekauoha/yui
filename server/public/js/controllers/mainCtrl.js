@@ -14,4 +14,10 @@ angular.module('yui').controller('mainCtrl', function($scope, mainService, $stat
     $scope.readImages();
   };
 
+  $scope.readImageId = function(image){
+    $scope.selectedImage = image;
+  };
+  $scope.readImageId();
+
+
 });
