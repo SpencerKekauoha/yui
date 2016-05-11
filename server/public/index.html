@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app='yui'>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yui</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+  <body ng-controller="mainCtrl">
+    <main>
+      <section>
+        <nav-dir></nav-dir>
+      </section>
+      <section>
+        <div class="intro-container">
+          <div class="intro"></div>
+        </div>
+      </section>
+      <section>
+        <ui-view></ui-view>
+      </section>
+
+      <!-- <div ng-repeat="so in soandso"><directive></div> -->
+
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js" charset="utf-8"></script>
+    <script src="./js/app.js" charset="utf-8"></script>
+    <script src="./js/controllers/mainCtrl.js" charset="utf-8"></script>
+    <script src="./js/directives/nav/navDir.js" charset="utf-8"></script>
+    <script src="./js/services/mainService.js" charset="utf-8"></script>
+  </body>
+</html>
