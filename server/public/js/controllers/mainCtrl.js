@@ -8,8 +8,8 @@ angular.module('yui').controller('mainCtrl', function($scope, mainService, $stat
   };
   $scope.readImages();
 
-  $scope.createImages = function(imageUrl){
-    mainService.createImages(imageUrl).then(function(response){
+  $scope.createImages = function(image){
+    mainService.createImages(image).then(function(response){
     });
     $scope.readImages();
   };

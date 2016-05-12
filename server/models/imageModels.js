@@ -2,7 +2,8 @@ var mongoose = require('mongoose');
 
 var imageSchema = new mongoose.Schema({
 
-  url: String
+  url: {type: String, required: true},
+  author: {type: String, required: true}
 
 });
 

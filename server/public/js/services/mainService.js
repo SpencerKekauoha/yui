@@ -9,12 +9,12 @@ angular.module('yui').service('mainService', function($http){
     });
   };
 
-  this.createImages = function(imageUrl){
-    console.log(imageUrl);
+  this.createImages = function(image){
+    console.log(image);
     return $http({
       method: 'POST',
       url: '/api/images',
-      data: {url:imageUrl}
+      data: image
     }).then(function(response){
       return response.data;
     });
