@@ -11,6 +11,7 @@ NAV
   opacity: .7;
   position: fixed;
   width: 100%;
+  z-index: 2;
 }
 
 .site-nav {
@@ -34,23 +35,47 @@ NAV
   color: white;
 }
 
-
 /*************
 
-INTRO
+EXPLORE VIEW - PARALLAX HEADER
 
 **************/
 
-.intro-container {
+.featured-container {
+  position: relative;
+  height: 95vh;
+  background-image: url("./images/magazine-table-min.jpeg");
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
   display: flex;
-  justify-content: center;
 }
 
-.intro {
-  height: 95vh;
-  width: 100vw;
-  background-image: url("https://images.unsplash.com/photo-1458532239918-14dabba19de5?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=3497ccbd61aa32beffa3eab734e8d812");
-  background-size: cover;
+.yui-logo {
+  height: 100px;
+  width: 100%;
+  background-image: url("./images/behance-logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 40%;
+  margin-top: -50px;
+  z-index: 1;
+}
+
+.featured-text {
+  height: 10vh;
+  width: 960px;
+  position: absolute;
+  left: 50%;
+  margin-left: -480px;
+  text-align: center;
+  top: 90%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: black;
+  z-index: 0;
 }
 
 /*************
@@ -64,6 +89,7 @@ EXPLORE VIEW
   flex-wrap: wrap;
   justify-content: center;
   background-color: white;
+  z-index: 10;
 }
 
 .image-flow {
@@ -80,7 +106,7 @@ EXPLORE VIEW
 
 /*************
 
-EXPLORE MODAL
+EXPLORE VIEW - MODAL
 
 **************/
 
@@ -199,7 +225,7 @@ POST VIEW
 
 /*************
 
-POST MODAL
+POST VIEW - MODAL
 
 **************/
 
