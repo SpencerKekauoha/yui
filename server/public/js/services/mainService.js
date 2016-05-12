@@ -30,4 +30,16 @@ angular.module('yui').service('mainService', function($http){
     });
   };
 
+  this.updateImage = function(image){
+    var id = image._id;
+    delete image._id;
+    return $http({
+      method: 'PUT',
+      url: '/api/images/' + id,
+      data: image
+    }).then(function(response){
+      return response.data;
+    });
+  };
+
 });

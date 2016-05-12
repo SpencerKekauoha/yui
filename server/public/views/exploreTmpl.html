@@ -1,30 +1,38 @@
 <section>
+  <div class="intro-container">
+    <div class="intro"></div>
+  </div>
+</section>
+<section>
   <div class="image-flow-container">
     <div ng-repeat="image in images" data-toggle="modal" data-target="#modal-1"><img class="image-flow" ng-src="{{image.url}}" ng-click="readImageId(image)"></div>
   </div>
 </section>
-
-
-<div class="container">
-    <div class="modal fade" id="modal-1">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h3 class="modal-title">Picture Name</h3>
-           </div>
-           <div class="">
-             <img src="{{selectedImage.url}}" class="image-flow"/>
-           </div>
-           <div class="modal-body">
-             Designer: {{selectedImage.author}}
-           </div>
-
-           <div class="modal-footer">
-            <a href="" class="btn btn-default" data-dismiss="modal">Close</a>
-            <a href="" class="btn btn-primary">Download</a>
-           </div>
+<section>
+  <div class="container">
+      <div class="modal fade" id="modal-1">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+             <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h3 class="modal-title" id="modal-image-title">{{selectedImage.title}}</h3>
+             </div>
+             <div class="modal-image-container">
+               <img src="{{selectedImage.url}}" class="modal-image"/>
+             </div>
+             <div class="modal-body" id="modal-image-body">
+               Designer: {{selectedImage.author}}
+             </div>
+             <div class="modal-footer">
+              <a href="" class="btn btn-default" data-dismiss="modal">Close</a>
+              <a href="" class="btn btn-primary">Download</a>
+              <button class="btn btn-primary" ng-click="updateImage(selectedImage)">Update</button>
+              <input type="text" ng-model="selectedImage.url" placeholder="Update Url">
+              <input type="text" ng-model="selectedImage.author" placeholder="Update Designer">
+              <input type="text" ng-model="selectedImage.title" placeholder="Update Title">
+             </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>

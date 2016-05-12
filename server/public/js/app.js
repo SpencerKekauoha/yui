@@ -10,6 +10,16 @@ angular.module('yui', ['ui.router'])
     .state('post', {
       url: '/post',
       templateUrl: '../views/postTmpl.html'
+    })
+
+    .state('login', {
+      url: '/login',
+      templateUrl: '../views/loginTmpl.html'
+    })
+
+    .state('yui', {
+      url: '/yui',
+      templateUrl: '../views/yuiTmpl.html'
     });
 
     $urlRouterProvider

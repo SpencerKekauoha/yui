@@ -1,9 +1,11 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
-
+var passport = require('passport');
+var session = require('express-session');
 
 var imageCtrl = require('./controllers/imageCtrl.js');
+
 
 var app = express();
 
@@ -13,6 +15,7 @@ app.use(express.static(__dirname + '/public'));
 app.get('/api/images', imageCtrl.imageRead);
 app.post('/api/images', imageCtrl.imageCreate);
 app.get('/api/images/:id', imageCtrl.imageIdRead);
+app.put('/api/images/:id', imageCtrl.imageUpdate);
 
 
 

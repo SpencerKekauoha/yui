@@ -19,5 +19,13 @@ angular.module('yui').controller('mainCtrl', function($scope, mainService, $stat
   };
   $scope.readImageId();
 
+  $scope.updateImage = function(image){
+    console.log($scope.selectedImage);
+    mainService.updateImage(image).then(function(response){
+      $scope.selectedImage = {};
+      $scope.readImages();
+    });
+  };
+
 
 });

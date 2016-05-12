@@ -33,6 +33,16 @@ module.exports = {
           res.status(200).json(response);
         }
       });
+  },
+
+  imageUpdate: function(req, res, next){
+    Image.findByIdAndUpdate(req.params.id, req.body, function(err, response){
+      if(err){
+        res.status(500).json(err);
+      } else {
+        res.status(200).json(response);
+      }
+    });
   }
 
 };
