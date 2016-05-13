@@ -23,15 +23,24 @@
                <img src="{{selectedImage.url}}" class="modal-image"/>
              </div>
              <div class="modal-body" id="modal-image-body">
-               Designer: {{selectedImage.author}}
+              Designer: {{selectedImage.author}}
+              </br>
+              Published By: {{selectedImage.user.name}}
              </div>
              <div class="modal-footer">
-              <a href="" class="btn btn-default" data-dismiss="modal">Close</a>
-              <a href="" class="btn btn-primary">Download</a>
-              <button class="btn btn-primary" ng-click="updateImage(selectedImage)">Update</button>
-              <input type="text" ng-model="selectedImage.url" placeholder="Update Url">
-              <input type="text" ng-model="selectedImage.author" placeholder="Update Designer">
-              <input type="text" ng-model="selectedImage.title" placeholder="Update Title">
+              <div class="modal-footer-update">
+                <button class="btn btn-primary" ng-click="updateImage(selectedImage)">Update</button>
+                <input type="text" ng-model="selectedImage.url" placeholder="Update Url">
+                <input type="text" ng-model="selectedImage.author" placeholder="Update Designer">
+                <input type="text" ng-model="selectedImage.title" placeholder="Update Title">
+                <button class="btn btn-primary" ng-click="deleteImage(selectedImage)" data-toggle="modal" data-target="#modal-1">Delete</button>
+              </div>
+              <div class="modal-footer-close">
+                 <a href="" class="btn btn-default" data-dismiss="modal">Close</a>
+              </div>
+              <div class="modal-footer-download">
+                <a href="" class="btn btn-primary">Download</a>
+              </div>
              </div>
           </div>
         </div>

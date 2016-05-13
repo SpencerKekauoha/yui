@@ -1,5 +1,7 @@
 angular.module('yui').service('mainService', function($http){
 
+
+// IMAGES //
   this.getImages = function(){
     return $http({
       method: 'GET',
@@ -10,7 +12,6 @@ angular.module('yui').service('mainService', function($http){
   };
 
   this.createImages = function(image){
-    console.log(image);
     return $http({
       method: 'POST',
       url: '/api/images',
@@ -41,5 +42,59 @@ angular.module('yui').service('mainService', function($http){
       return response.data;
     });
   };
+
+  this.deleteImage = function(image){
+    var id = image._id;
+    delete image._id;
+    return $http({
+      method: 'DELETE',
+      url: '/api/images/' + id,
+      data: image
+    }).then(function(response){
+      return response.data;
+    });
+  };
+
+  // Auth //
+  this.register = function(user) {
+    return $http({
+      method: 'POST',
+      url: '/users',
+      data: user
+    }).then(function(response) {
+      return response;
+    });
+  };
+
+  this.getUser = function() {
+    return $http({
+      method: 'GET',
+      url: '/me'
+    }).then(function(response) {
+      return response;
+    });
+  };
+
+  this.login = function(user) {
+    return $http({
+      method: 'POST',
+      url: '/login',
+      data: user
+    }).then(function(response) {
+      return response;
+    });
+  };
+
+  this.logout = function() {
+    console.log('working');
+    return $http({
+      method: 'GET',
+      url: '/logout',
+    }).then(function(response) {
+      return response;
+    });
+  };
+
+
 
 });

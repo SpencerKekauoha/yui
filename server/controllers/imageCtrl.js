@@ -14,7 +14,7 @@ module.exports = {
   },
 
   imageRead: function(req, res, next){
-    Image.find()
+    Image.find().populate('user')
       .exec(function(err, response){
         if(err){
           res.status(500).json(err);
@@ -37,6 +37,16 @@ module.exports = {
 
   imageUpdate: function(req, res, next){
     Image.findByIdAndUpdate(req.params.id, req.body, function(err, response){
+      if(err){
+        res.status(500).json(err);
+      } else {
+        res.status(200).json(response);
+      }
+    });
+  },
+
+  imageDelete: function(req, res, next){
+    Image.findByIdAndRemove(req.params.id, function(err, response){
       if(err){
         res.status(500).json(err);
       } else {

@@ -1,12 +1,44 @@
-<div class="container">
-
-	<div class="jumbotron text-center">
-		<h1><span class="fa fa-lock"></span>Authentication</h1>
-
-		<p>Login or Register with:</p>
-		<a href="/login" class="btn btn-default"><span class="fa fa-user"></span> Local Login</a>
-		<a href="/signup" class="btn btn-default"><span class="fa fa-user"></span> Local Signup</a>
-		<a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span> Facebook</a>
-	</div>
-
-</div>
+<section ng-controller="loginCtrl" ng-controller="profileCtrl">
+  <div class="container">
+    <div class="modal-post-btn-container"><button type="button" id="login-btn" data-toggle="modal" data-target="#modal-1">LOGIN/REGISTER</button></div>
+      <div class="modal fade" id="modal-1">
+  			<div class="modal-dialog modal-lg">
+  				<div class="modal-content">
+  					 <div class="modal-header">
+  					 	<button type="button" class="close" data-toggle="modal" data-target="#modal-1">&times;</button>
+  					 	<h3 class="modal-title">Share your designs</h3>
+  					 </div>
+  					 <div class="modal-body">
+							 <div>
+							 	<br><br><br>
+							 	<br><br><br>
+							 	<br><br><br>
+							 	<input type="text" ng-model="credentials.email" placeholder="email">
+							 	<input type="password" ng-model="credentials.password" placeholder="password">
+							 	<button type="button" ng-click="login()" data-toggle="modal" data-target="#modal-1">Login</button>
+							 	<br><br><br>
+							 	<input type="text" ng-model="newUser.name" placeholder="name">
+							 	<input type="text" ng-model="newUser.email" placeholder="email">
+							 	<input type="password" ng-model="newUser.password" placeholder="password">
+							 	<button type="button" ng-click="register()" data-toggle="modal" data-target="#modal-1">register</button>
+								{{user}}
+ 							 <button type="button" ng-click="logout()" data-toggle="modal" data-target="#modal-1">Logout</button>
+							 </div>
+  					 </div>
+  					 <div class="modal-footer">
+							<div class="modal-footer-close">
+  					 		<a href="" class="btn btn-default" data-dismiss="modal">Close</a>
+							</div>
+							<div class="modal-footer-download">
+  					 		<a href="" class="btn btn-primary">Figure out later</a>
+							</div>
+							<div class="modal-footer-logout">
+								{{user}}
+								<button type="button" ng-click="logout()" data-toggle="modal" data-target="#modal-1">Logout</button>
+							</div>
+  					 </div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </section>

@@ -12,11 +12,15 @@
                <input type="text" placeholder="Image Url" ng-model="image.url">
                <input type="text" placeholder="Designer Name" ng-model="image.author">
                <input type="text" placeholder="Image Title" ng-model="image.title">
-               <button id="post-modal-btn" type="button" ng-click="createImages(image)">Publish</button>
+               <button id="post-modal-btn" class="post-btn" type="button" ng-click="createImages(image)" data-toggle="modal" data-target="#modal-1">Publish</button>
   					 </div>
   					 <div class="modal-footer">
-  					 	<a href="" class="btn btn-default" data-dismiss="modal">Close</a>
-  					 	<a href="" class="btn btn-primary">Figure out later</a>
+              <div class="modal-footer-close">
+               <a href="" class="btn btn-default" data-dismiss="modal">Close</a>
+              </div>
+              <div class="modal-footer-download">
+  					 	  <a href="" class="btn btn-primary">Figure out later</a>
+              </div>
   					 </div>
   				</div>
   			</div>
