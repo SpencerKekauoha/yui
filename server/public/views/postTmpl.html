@@ -4,23 +4,30 @@
       <div class="modal fade" id="modal-1">
   			<div class="modal-dialog modal-lg">
   				<div class="modal-content">
-  					 <div class="modal-header">
-  					 	<button type="button" class="close" data-dismiss="modal">&times;</button>
-  					 	<h3 class="modal-title">Share your designs</h3>
-  					 </div>
+  					<div class="modal-header">
+  					 <button type="button" class="close" data-dismiss="modal">&times;</button>
+  					 <h3 class="modal-title">Publish Your Design</h3>
+  					</div>
   					 <div class="modal-body">
-               <input type="text" placeholder="Image Url" ng-model="image.url">
-               <input type="text" placeholder="Designer Name" ng-model="image.author">
-               <input type="text" placeholder="Image Title" ng-model="image.title">
-               <button id="post-modal-btn" class="post-btn" type="button" ng-click="createImages(image)" data-toggle="modal" data-target="#modal-1">Publish</button>
+               <form class="" action="index.html" method="post">
+                 <fieldset>
+                   <legend>Design Info</legend>
+                   <div class="modal-post-input-container">
+                     <input class="modal-post-input" type="text" placeholder="Image Url" ng-model="image.url"></br>
+                     <input class="modal-post-input" type="text" placeholder="Designer Name" ng-model="image.author"></br>
+                     <input class="modal-post-input" type="text" placeholder="Image Title" ng-model="image.title"></br>
+                     <input class="modal-post-input" type="text" placeholder="Behance link" ng-model="image.behance"></br>
+                     <input class="modal-post-input" type="text" placeholder="Linkedin link" ng-model="image.linkedin"></br>
+                     <input class="modal-post-input" type="text" placeholder="Facebook link" ng-model="image.facebook"></br>
+                     <input class="modal-post-input" type="text" placeholder="Website link" ng-model="image.website"></br>
+                   </div>
+                 </fieldset>
+               </form>
   					 </div>
   					 <div class="modal-footer">
-              <div class="modal-footer-close">
-               <a href="" class="btn btn-default" data-dismiss="modal">Close</a>
-              </div>
-              <div class="modal-footer-download">
-  					 	  <a href="" class="btn btn-primary">Figure out later</a>
-              </div>
+               <div class="modal-post-button-container">
+                 <button id="post-modal-btn" class="post-btn" type="button" ng-click="createImages(image)" data-toggle="modal" data-target="#modal-1">Publish</button>
+               </div>
   					 </div>
   				</div>
   			</div>

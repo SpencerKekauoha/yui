@@ -69,7 +69,7 @@ angular.module('yui').service('mainService', function($http){
   this.getUser = function() {
     return $http({
       method: 'GET',
-      url: '/me'
+      url: '/me',
     }).then(function(response) {
       return response;
     });
@@ -86,7 +86,6 @@ angular.module('yui').service('mainService', function($http){
   };
 
   this.logout = function() {
-    console.log('working');
     return $http({
       method: 'GET',
       url: '/logout',
@@ -95,6 +94,14 @@ angular.module('yui').service('mainService', function($http){
     });
   };
 
+  this.findUserId = function(userId) {
+    return $http({
+      method: "GET",
+      url: "/users/" + userId,
+    }).then(function(response){
+      return response.data;
+    });
+  };
 
 
 });

@@ -6,35 +6,38 @@
   				<div class="modal-content">
   					 <div class="modal-header">
   					 	<button type="button" class="close" data-toggle="modal" data-target="#modal-1">&times;</button>
-  					 	<h3 class="modal-title">Share your designs</h3>
+  					 	<h3 class="modal-title">Login/Register</h3>
   					 </div>
   					 <div class="modal-body">
-							 <div>
-							 	<br><br><br>
-							 	<br><br><br>
-							 	<br><br><br>
-							 	<input type="text" ng-model="credentials.email" placeholder="email">
-							 	<input type="password" ng-model="credentials.password" placeholder="password">
-							 	<button type="button" ng-click="login()" data-toggle="modal" data-target="#modal-1">Login</button>
-							 	<br><br><br>
-							 	<input type="text" ng-model="newUser.name" placeholder="name">
-							 	<input type="text" ng-model="newUser.email" placeholder="email">
-							 	<input type="password" ng-model="newUser.password" placeholder="password">
-							 	<button type="button" ng-click="register()" data-toggle="modal" data-target="#modal-1">register</button>
-								{{user}}
- 							 <button type="button" ng-click="logout()" data-toggle="modal" data-target="#modal-1">Logout</button>
-							 </div>
+               <form class="" action="index.html" method="post">
+                 <fieldset>
+                   <legend>Register</legend>
+                   <div class="modal-login-input-container">
+                    <input class="modal-login-input" type="text" ng-model="newUser.name" placeholder="name">
+     							 	<input class="modal-login-input" type="text" ng-model="newUser.email" placeholder="email">
+     							 	<input class="modal-login-input" type="password" ng-model="newUser.password" placeholder="password">
+                   </div>
+                   <div class="modal-login-input-container">
+                     <button id="post-modal-btn" class="post-btn" type="button" ng-click="register()" data-toggle="modal" data-target="#modal-1">register</button>
+                   </div>
+                 </fieldset>
+               </form>
+               <form class="" action="index.html" method="post">
+                 <fieldset>
+                   <legend>Login</legend>
+                   <div class="modal-login-input-container">
+                     <input class="modal-login-input" type="text" ng-model="credentials.email" placeholder="email">
+                     <input class="modal-login-input" type="password" ng-model="credentials.password" placeholder="password">
+                   </div>
+                   <div class="modal-login-input-container">
+                     <button id="post-modal-btn" class="post-btn" type="button" ng-click="login()" data-toggle="modal" data-target="#modal-1">Login</button>
+                   </div>
+                 </fieldset>
+               </form>
   					 </div>
   					 <div class="modal-footer">
-							<div class="modal-footer-close">
-  					 		<a href="" class="btn btn-default" data-dismiss="modal">Close</a>
-							</div>
-							<div class="modal-footer-download">
-  					 		<a href="" class="btn btn-primary">Figure out later</a>
-							</div>
-							<div class="modal-footer-logout">
-								{{user}}
-								<button type="button" ng-click="logout()" data-toggle="modal" data-target="#modal-1">Logout</button>
+							<div class="modal-login-input-container">
+								<button id="post-modal-btn" class="post-btn" type="button" ng-click="logout()" data-toggle="modal" data-target="#modal-1">Logout</button>
 							</div>
   					 </div>
   				</div>
@@ -42,3 +45,5 @@
   		</div>
   	</div>
   </section>
+
+  <!-- if broken do {{user}} -->

@@ -16,15 +16,22 @@ var passport = require('./services/passport.js');
 
 // POLICIES //
 var isAuthed = function(req, res, next) {
-  console.log('hit');
-  alert('you are not logged in.');
   if (!req.isAuthenticated()) return res.status(401).send();
   return next();
 };
 
-// var isAuthedUser = function(req, res, next) {
-//   if(!req.isAuthenticated && user._id)
-// }
+// var prereq = function(req, res, next) {
+//   console.log(req.user);
+//   console.log(req.user._id.toHexString());
+//   if (req.user) {
+//     req.body.user = req.user._id.toHexString();
+//     next();
+//     return true;
+//   } else {
+//     next();
+//     return res.status(401).send();
+//   }
+// };
 
 var app = express();
 
@@ -50,6 +57,8 @@ app.delete('/api/images/:id', isAuthed, imageCtrl.imageDelete);
 app.post('/users', UserCtrl.register);
 app.get('/me', isAuthed, UserCtrl.me);
 app.put('/users/:_id', isAuthed, UserCtrl.update);
+app.get('/users/:id', UserCtrl.userIdRead);
+app.get('/users', UserCtrl.userRead);
 
 app.post('/login', passport.authenticate('local', {
   successRedirect: '/me'
@@ -59,17 +68,6 @@ app.get('/logout', function(req, res, next) {
   return res.status(200).send('logged out');
 });
 
-
-
-
-// app.listen(8000, function(){
-//     console.log("listening on port 8000");
-// });
-//
-// mongoose.connect('mongodb://localhost:27017/yui');
-// mongoose.connection.once('open', function(){
-//     console.log('Connected to mongodb\n');
-// });
 
 // CONNECTIONS //
 var mongoURI = config.MONGO_URI;

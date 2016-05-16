@@ -20,7 +20,6 @@ angular.module('yui').controller('mainCtrl', function($scope, mainService, $stat
     });
   };
 
-
   $scope.readImageId = function(image){
     $scope.selectedImage = image;
   };
@@ -39,6 +38,15 @@ angular.module('yui').controller('mainCtrl', function($scope, mainService, $stat
       $scope.readImages();
     });
   };
+
+  $scope.getCurrentUser = function(){
+    console.log('hit');
+    mainService.findUserId($scope.user._id).then(function(response){
+      $scope.user = response;
+    });
+  };
+
+
 
 
 

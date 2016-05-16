@@ -22,8 +22,29 @@ module.exports = {
       if (err) next(err);
       res.status(200).send('user updated');
     });
-  }
+  },
 
+  userIdRead: function(req, res, next){
+    User.findById(req.params.id)
+      .exec(function(err, response){
+        if(err){
+          res.status(500).json(err);
+        } else {
+          res.status(200).json(response);
+        }
+      });
+  },
+
+  userRead: function(req, res, next){
+    User.find().populate('user')
+      .exec(function(err, response){
+        if(err){
+          res.status(500).json(err);
+        } else {
+          res.status(200).json(response);
+        }
+      });
+  },
 
 
 };

@@ -1,6 +1,7 @@
 <header class ="featured-container">
   <div class="yui-logo">
     <div class="featured-text">
+    </br></br>
       <h1><strong>Featured Designer</strong></h1>
     </div>
   </div>
@@ -21,26 +22,32 @@
              </div>
              <div class="modal-image-container">
                <img src="{{selectedImage.url}}" class="modal-image"/>
+               <!-- {{selectedImage.user._id}} -->
              </div>
              <div class="modal-body" id="modal-image-body">
               Designer: {{selectedImage.author}}
               </br>
-              Published By: {{selectedImage.user.name}}
+              Published By: {{selectedImage.user.name}} {{selectedImage.user._id}}
              </div>
              <div class="modal-footer">
-              <div class="modal-footer-update">
-                <button class="btn btn-primary" ng-click="updateImage(selectedImage)">Update</button>
-                <input type="text" ng-model="selectedImage.url" placeholder="Update Url">
-                <input type="text" ng-model="selectedImage.author" placeholder="Update Designer">
-                <input type="text" ng-model="selectedImage.title" placeholder="Update Title">
-                <button class="btn btn-primary" ng-click="deleteImage(selectedImage)" data-toggle="modal" data-target="#modal-1">Delete</button>
-              </div>
-              <div class="modal-footer-close">
-                 <a href="" class="btn btn-default" data-dismiss="modal">Close</a>
-              </div>
-              <div class="modal-footer-download">
-                <a href="" class="btn btn-primary">Download</a>
-              </div>
+                <div class="modal-footer-update">
+                  <button class="btn btn-primary" ng-click="updateImage(selectedImage)">Update</button>
+                  <input type="text" ng-model="selectedImage.url" placeholder="Update Url">
+                  <input type="text" ng-model="selectedImage.author" placeholder="Update Designer">
+                  <input type="text" ng-model="selectedImage.title" placeholder="Update Title">
+                  <input type="text" ng-model="selectedImage.behance" placeholder="Update behance">
+                  <input type="text" ng-model="selectedImage.linkedin" placeholder="Update linkedin">
+                  <input type="text" ng-model="selectedImage.facebook" placeholder="Update facebook">
+                  <input type="text" ng-model="selectedImage.website" placeholder="Update website">
+                  <button class="btn btn-primary" ng-click="deleteImage(selectedImage)" data-toggle="modal" data-target="#modal-1" ng-if="image.user === selectedImage.user._id">Delete</button>
+                  <!-- ng-if="image.user === selectedImage.user._id" -->
+                </div>
+                <div>
+                     Contact Me: <a href="{{selectedImage.behance}}"><img class="modal-footer-icons" src="./styles/images/behance-icon.svg" alt="" /></a>
+                     <a href="{{selectedImage.linkedin}}"><img class="modal-footer-icons" src="./styles/images/linkedin-icon.svg" alt="" /></a>
+                     <a href="{{selectedImage.facebook}}"><img class="modal-footer-icons" src="./styles/images/facebook-icon.svg" alt="" /></a>
+                     <a href="{{selectedImage.website}}"><img class="modal-footer-icons" src="./styles/images/world.svg" alt="" /></a>
+                </div>
              </div>
           </div>
         </div>
