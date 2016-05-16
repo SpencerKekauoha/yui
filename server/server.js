@@ -57,8 +57,8 @@ app.delete('/api/images/:id', isAuthed, imageCtrl.imageDelete);
 app.post('/users', UserCtrl.register);
 app.get('/me', isAuthed, UserCtrl.me);
 app.put('/users/:_id', isAuthed, UserCtrl.update);
-app.get('/users/:id', UserCtrl.userIdRead);
-app.get('/users', UserCtrl.userRead);
+// app.get('/users/:id', UserCtrl.userIdRead);
+// app.get('/users', UserCtrl.userRead);
 
 app.post('/login', passport.authenticate('local', {
   successRedirect: '/me'

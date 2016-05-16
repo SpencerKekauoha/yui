@@ -94,14 +94,5 @@ angular.module('yui').service('mainService', function($http){
     });
   };
 
-  this.findUserId = function(userId) {
-    return $http({
-      method: "GET",
-      url: "/users/" + userId,
-    }).then(function(response){
-      return response.data;
-    });
-  };
-
 
 });

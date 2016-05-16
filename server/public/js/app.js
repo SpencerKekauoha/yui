@@ -4,7 +4,8 @@ angular.module('yui', ['ui.router'])
     $stateProvider
     .state('explore', {
       url: '/explore',
-      templateUrl: '../views/exploreTmpl.html'
+      templateUrl: '../views/exploreTmpl.html',
+      controller: 'mainCtrl'
     })
 
     .state('post', {

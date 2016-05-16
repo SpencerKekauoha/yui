@@ -172,7 +172,11 @@ height: 5vh;
   height: 5vh;
 }
 
+.modal-footer-icons:hover {
+  -webkit-filter: invert(50%); filter: invert(50%);
+}
 
+/*try inverting then saturating*/
 
 /*************
 
@@ -473,7 +477,7 @@ legend {
 }
 
 ::-webkit-input-placeholder {
-   color: black;
+   color: rgb(85, 85, 85);
 }
 
 .modal-post-button-container {
@@ -481,9 +485,7 @@ legend {
   justify-content: center;
 }
 
-.modal-footer-logout {
-  height: 5vh;
-}
+
 
 
 

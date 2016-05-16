@@ -8,8 +8,7 @@ angular.module('yui').controller("loginCtrl", function($scope, mainService, $sta
   $scope.login = function() {
   mainService.login($scope.credentials).then(function(response) {
     $state.go('explore');
-    console.log(response.data);
-    console.log(response.data._id);
+    $scope.user = response.data._id;
     alert('Welcome ' + response.data.name);
   });
 };

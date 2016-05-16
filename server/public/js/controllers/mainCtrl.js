@@ -9,13 +9,13 @@ angular.module('yui').controller('mainCtrl', function($scope, mainService, $stat
 
   $scope.createImages = function(image){
     mainService.getUser().then(function(response){
-      console.log(response.data._id);
-      image.user = response.data._id;
+      console.log(response.data._id); 
+      $scope.image.user = response.data._id;
       mainService.createImages(image).then(function(response){
       });
       $scope.readImages();
   }).catch(function(err){
-      alert('login if you want to post');
+      alert('You must be logged in to publish');
       return $state.go('login');
     });
   };
@@ -40,11 +40,12 @@ angular.module('yui').controller('mainCtrl', function($scope, mainService, $stat
   };
 
   $scope.getCurrentUser = function(){
-    console.log('hit');
-    mainService.findUserId($scope.user._id).then(function(response){
-      $scope.user = response;
+    mainService.getUser().then(function(response){
+      $scope.user = response.data;
     });
   };
+
+  $scope.getCurrentUser();
 
 
 
