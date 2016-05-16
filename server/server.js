@@ -53,6 +53,9 @@ app.get('/api/images/:id', imageCtrl.imageIdRead);
 app.put('/api/images/:id', imageCtrl.imageUpdate);
 app.delete('/api/images/:id', isAuthed, imageCtrl.imageDelete);
 
+// LIKES //
+app.post('/api/likes', imageCtrl.addLike);
+
 // AUTH //
 app.post('/users', UserCtrl.register);
 app.get('/me', isAuthed, UserCtrl.me);

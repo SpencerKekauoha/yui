@@ -53,6 +53,25 @@ module.exports = {
         res.status(200).json(response);
       }
     });
+  },
+
+  // LIKES //
+
+  addLike: function(req, res, next){
+    Image.findById(req.body.postId, function(err, post){
+      if(err) {
+        res.status(500).json(err);
+      } else {
+        post.likes.push(req.body.userId);
+        post.save(function(err, data){
+          if (err){
+            res.status(500).send(err);
+          } else {
+            res.status(200).json(data);
+          }
+        });
+      }
+    });
   }
 
 };

@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var likesSchema = require('../models/likeModel.js');
 
 var imageSchema = new mongoose.Schema({
 
@@ -9,6 +10,7 @@ var imageSchema = new mongoose.Schema({
   linkedin: {type: String, required: false},
   facebook: {type: String, required: false},
   website: {type: String, required: false},
+  likes: likesSchema,
   user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
 
 });

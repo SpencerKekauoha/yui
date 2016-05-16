@@ -55,6 +55,10 @@ angular.module('yui').service('mainService', function($http){
     });
   };
 
+  // LIKES //
+
+  
+
   // Auth //
   this.register = function(user) {
     return $http({
