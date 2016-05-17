@@ -59,6 +59,12 @@ NAV
 
 /*************
 
+YUI VIEW
+
+**************/
+
+/*************
+
 EXPLORE VIEW - PARALLAX HEADER
 
 **************/
@@ -74,9 +80,9 @@ EXPLORE VIEW - PARALLAX HEADER
 }
 
 .yui-logo {
-  height: 100px;
+  height: 50vh;
   width: 100%;
-  background-image: url("./images/behance-logo.svg");
+  background-image: url("./images/yui-logo.svg");
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
@@ -110,21 +116,39 @@ EXPLORE VIEW
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: white;
+  background-color: black;
   z-index: 10;
 }
 
 .image-flow {
   height: 35vh;
-  width: auto;
   margin: 0;
   padding: 0;
   margin-bottom: 0;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
 }
 
 .image-flow:hover {
   opacity: .4;
+  cursor: crosshair;
+  z-index: 10;
 }
+
+/*************
+
+EXPLORE VIEW - MODAL - PARALLAX
+
+**************/
+
+.is-showing {
+  opacity: 1;
+  transform: translateX(0px);
+  z-index: 10;
+}
+
 
 /*************
 
@@ -157,6 +181,11 @@ EXPLORE VIEW - MODAL
   margin-top: 5vh;
 }
 
+.modal-likes-container {
+  display: flex;
+  justify-content: center;
+}
+
 .modal-footer {
   height: 20vh;
   display: flex;
@@ -170,6 +199,7 @@ height: 5vh;
 
 .modal-footer-icons {
   height: 5vh;
+  cursor: crosshair;
 }
 
 .modal-footer-icons:hover {
@@ -177,6 +207,7 @@ height: 5vh;
 }
 
 /*try inverting then saturating*/
+
 
 /*************
 
@@ -735,4 +766,14 @@ body {
     -webkit-transform: rotate(359deg);
             transform: rotate(359deg);
   }
+}
+
+/*SHOW USER*/
+
+.practice {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 50vh;
+  color: blue;
 }

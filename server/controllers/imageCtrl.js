@@ -1,4 +1,6 @@
 var Image = require('../models/imageModels.js');
+var User = require('../models/UserModel.js');
+var Likes = require('../models/likeModel.js');
 
 module.exports = {
 
@@ -58,20 +60,23 @@ module.exports = {
   // LIKES //
 
   addLike: function(req, res, next){
-    Image.findById(req.body.postId, function(err, post){
-      if(err) {
+    Image.findByIdAndUpdate(req.params.id, {$addToSet: { likes: req.user._id}}, function(err, response){
+      if(err){
         res.status(500).json(err);
       } else {
-        post.likes.push(req.body.userId);
-        post.save(function(err, data){
-          if (err){
-            res.status(500).send(err);
-          } else {
-            res.status(200).json(data);
-          }
-        });
+        res.status(200).json(response);
       }
     });
-  }
+  },
+
+  // removeLike: function(req, res, next){
+  //   Image.findByIdAndRemove(req.params.id, {$removeFromSet: {likes: req.user._id}}, function(err, response){
+  //     if(err){
+  //       res.status(500).json(err);
+  //     } else {
+  //       res.status(200).json(response);
+  //     }
+  //   });
+  // }
 
 };

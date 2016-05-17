@@ -57,7 +57,29 @@ angular.module('yui').service('mainService', function($http){
 
   // LIKES //
 
-  
+  this.updateLikes = function(image) {
+    var id = image._id;
+    delete image._id;
+    return $http({
+      method: 'PUT',
+      url: '/api/likes/' + id,
+      data: image
+    }).then(function(response){
+      return response.data;
+    });
+  };
+
+  // this.removeLikes = function(image) {
+  //   var id = image._id;
+  //   delete image._id;
+  //   return $http({
+  //     method: 'DELETE',
+  //     url: '/api/likes/' + id,
+  //     data: image
+  //   }).then(function(response){
+  //     return response.data;
+  //   });
+  // };
 
   // Auth //
   this.register = function(user) {

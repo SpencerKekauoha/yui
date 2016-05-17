@@ -10,7 +10,7 @@ var imageSchema = new mongoose.Schema({
   linkedin: {type: String, required: false},
   facebook: {type: String, required: false},
   website: {type: String, required: false},
-  likes: likesSchema,
+  likes: [{type: mongoose.Schema.Types.ObjectId, ref: 'likes'}],
   user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
 
 });

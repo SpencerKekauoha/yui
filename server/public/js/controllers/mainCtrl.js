@@ -9,8 +9,8 @@ angular.module('yui').controller('mainCtrl', function($scope, mainService, $stat
 
   $scope.createImages = function(image){
     mainService.getUser().then(function(response){
-      console.log(response.data._id); 
-      $scope.image.user = response.data._id;
+      console.log(response.data._id);
+      image.user = response.data._id;
       mainService.createImages(image).then(function(response){
       });
       $scope.readImages();
@@ -44,9 +44,28 @@ angular.module('yui').controller('mainCtrl', function($scope, mainService, $stat
       $scope.user = response.data;
     });
   };
-
   $scope.getCurrentUser();
 
+// LIKES //
+
+    $scope.likeClick = function(image){
+      console.log('hit');
+      mainService.updateLikes(image).then(function(response){
+        if($scope.selectedImage.likes.indexOf($scope.user._id) === -1) {
+          $scope.selectedImage.likes.push($scope.user._id);
+        }
+        $scope.readImages();
+      });
+    };
+
+    // $scope.dislikeClick = function(image){
+    //   mainService.removeLikes(image).then(function(response){
+    //     if($scope.selectedImage.likes.indexOf($scope.user._id) === -1) {
+    //       $scope.selectedImage.likes.delete($scope.user._id);
+    //     }
+    //     $scope.readImages();
+    //   });
+    // };
 
 
 

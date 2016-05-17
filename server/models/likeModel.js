@@ -2,12 +2,10 @@ var mongoose = require('mongoose');
 
 var  likesSchema = new mongoose.Schema({
 
-  likes: [
-    {
-      like: {type: Number}
-    }
-  ]
+  likes: [],
+  likeCount: 0,
+  imageId: {type: mongoose.Schema.Types.ObjectId, ref: 'Image'}
 
 });
 
-module.exports = likesSchema;
+module.exports = mongoose.model('likes', likesSchema);
