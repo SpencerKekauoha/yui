@@ -15,7 +15,7 @@ angular.module('yui').controller('mainCtrl', function($scope, mainService, $stat
       });
       $scope.readImages();
   }).catch(function(err){
-      alert('You must be logged in to publish');
+      alert('Register an account and login to publish.');
       return $state.go('login');
     });
   };

@@ -11,7 +11,7 @@ NAV
   background-color: black;
   opacity: .7;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   z-index: 2;
 }
 
@@ -31,17 +31,28 @@ NAV
   color: white;
 }
 
+.nav-link:visited {
+  color: white;
+  text-decoration: none;
+}
+
 .nav-link:hover {
   text-decoration: none;
   color: white;
 }
 
+#nav-link-yui:hover {
+  color: rgb(196, 196, 196);
+}
+
 #nav-link-explore:hover {
   color: rgb(0, 167, 238);
 }
+
 #nav-link-post:hover {
   color: #E14658;
 }
+
 #nav-link-login:hover {
   color: rgb(251, 241, 0);
 }
@@ -49,19 +60,26 @@ NAV
 .nav-link-img {
   height: 20px;
   width: auto;
+  margin: 0;
+  padding: 0;
   z-index: 100;
   -webkit-filter: invert(100%); filter: invert(100%);
 }
 
-.nav-link-img:hover {
-
+#yui-nav-link-img {
+  height: 20px;
+  width: auto;
+  z-index: 100;
 }
+
 
 /*************
 
 YUI VIEW
 
 **************/
+
+
 
 /*************
 
@@ -91,9 +109,9 @@ EXPLORE VIEW - PARALLAX HEADER
   z-index: 1;
 }
 
-.featured-text {
+/*.featured-text {
   height: 10vh;
-  width: 960px;
+
   position: absolute;
   left: 50%;
   margin-left: -480px;
@@ -104,7 +122,7 @@ EXPLORE VIEW - PARALLAX HEADER
   letter-spacing: 3px;
   color: black;
   z-index: 0;
-}
+}*/
 
 /*************
 
@@ -257,7 +275,7 @@ POST VIEW
 #post-btn:before {
   position: absolute;
   content: "";
-  background: url(http://f.cl.ly/items/3H3A0D1N281a2T280F3o/heist.svg) no-repeat center center;
+  background: url("./images/yui-logo.svg") no-repeat center center;
   width: 100%;
   height: 100%;
   top: 0;
@@ -435,7 +453,7 @@ LOGIN VIEW
 #login-btn:before {
   position: absolute;
   content: "";
-  background: url(http://f.cl.ly/items/3H3A0D1N281a2T280F3o/heist.svg) no-repeat center center;
+  background: url("./images/yui-logo.svg") no-repeat center center;
   width: 100%;
   height: 100%;
   top: 0;
@@ -645,16 +663,22 @@ FIGURE THIS OUT 2 - DANCING BLOCKS
 
 **************/
 
-
-.dancing-container {
-  width: 80px;
-  height: 100px;
-  margin: 100px auto;
-  margin-top: calc(100vh / 2 - 50px);
-  background-color: red;
+.svg-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
 }
 
-.block {
+.dancing-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#block {
   position: relative;
   box-sizing: border-box;
   float: left;
@@ -688,7 +712,7 @@ FIGURE THIS OUT 3 - Squiggly Circles
 
 **************/
 
-body, html {
+/*body, html {
   position: relative;
   height: 100%;
 }
@@ -766,7 +790,7 @@ body {
     -webkit-transform: rotate(359deg);
             transform: rotate(359deg);
   }
-}
+}*/
 
 /*SHOW USER*/
 
