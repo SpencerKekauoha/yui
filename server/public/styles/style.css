@@ -161,7 +161,8 @@ EXPLORE VIEW - PARALLAX HEADER
 .featured-container {
   position: relative;
   height: 95vh;
-  background-image: url("./images/magazine-table-min.jpeg");
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/35188833933094.56bd2a413eeaf.jpg");
+  background: blur(5px);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -377,7 +378,7 @@ POST VIEW
 #post-btn:before {
   position: absolute;
   content: "";
-  background: url(http://f.cl.ly/items/3H3A0D1N281a2T280F3o/heist.svg) no-repeat center center;
+  /*background: url(http://f.cl.ly/items/3H3A0D1N281a2T280F3o/heist.svg) no-repeat center center;*/
   width: 100%;
   height: 100%;
   top: 0;
@@ -555,7 +556,7 @@ LOGIN VIEW
 #login-btn:before {
   position: absolute;
   content: "";
-  background: url(http://f.cl.ly/items/3H3A0D1N281a2T280F3o/heist.svg) no-repeat center center;
+  /*background: url(http://f.cl.ly/items/3H3A0D1N281a2T280F3o/heist.svg) no-repeat center center;*/
   width: 100%;
   height: 100%;
   top: 0;
@@ -861,4 +862,5 @@ body {
   justify-content: center;
   height: 50vh;
   color: blue;
+  width: 50vw;
 }
