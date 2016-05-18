@@ -2,12 +2,16 @@ $(window).scroll(function(){
 
   var winScroll = $(this).scrollTop();
 
-  $('.yui-logo').css({
+  $('.featured-work-link-container').css({
     'transform': 'translate(0px, -'+ winScroll /2 +'%)'
   });
 
   $('.featured-text').css({
-    'transform': 'translate(0px, -'+ winScroll /2 +'%)'
+    'transform': 'translate(0px, '+ winScroll /2 +'%)'
+  });
+
+  $('.dancing-container').css({
+    'transform': 'translate(0px, '+ winScroll /3.5 +'%)'
   });
 
   if(winScroll > $('.image-flow-container').offset().top - ($(window).height() / 2)) {

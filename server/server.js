@@ -3,7 +3,6 @@ var bodyParser = require("body-parser");
 var session = require('express-session');
 var mongoose = require("mongoose");
 
-
 // CONFIG //
 var config = require('./config/config.js');
 
@@ -19,19 +18,6 @@ var isAuthed = function(req, res, next) {
   if (!req.isAuthenticated()) return res.status(401).send();
   return next();
 };
-
-// var prereq = function(req, res, next) {
-//   console.log(req.user);
-//   console.log(req.user._id.toHexString());
-//   if (req.user) {
-//     req.body.user = req.user._id.toHexString();
-//     next();
-//     return true;
-//   } else {
-//     next();
-//     return res.status(401).send();
-//   }
-// };
 
 var app = express();
 

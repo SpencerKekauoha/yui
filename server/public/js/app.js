@@ -24,6 +24,6 @@ angular.module('yui', ['ui.router'])
     });
 
     $urlRouterProvider
-      .otherwise('/explore');
+      .otherwise('/yui');
 
   });

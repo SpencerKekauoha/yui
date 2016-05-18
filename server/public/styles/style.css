@@ -79,6 +79,77 @@ YUI VIEW
 
 **************/
 
+.animation-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.dancing-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.block.animate {
+  animation-name: wave;
+}
+
+.block:nth-child(4n+1) { -webkit-animation: wave 2s ease .0s infinite; animation: wave 2s ease .0s infinite; }
+.block:nth-child(4n+2) { -webkit-animation: wave 2s ease .2s infinite; animation: wave 2s ease .2s infinite; }
+.block:nth-child(4n+3) { -webkit-animation: wave 2s ease .4s infinite; animation: wave 2s ease .4s infinite; }
+.block:nth-child(4n+4) { -webkit-animation: wave 2s ease .6s infinite; animation: wave 2s ease .6s infinite; margin-right: 0; }
+
+@-webkit-keyframes wave {
+  0%   { top: 0;     opacity: 1; }
+  50%  { top: 30px;  opacity: .2; }
+  100% { top: 0;     opacity: 1; }
+}
+
+@keyframes wave {
+  0%   { top: 0;     opacity: 1; }
+  50%  { top: 30px;  opacity: .2; }
+  100% { top: 0;     opacity: 1; }
+}
+
+.yui-what-is-container {
+  display: flex;
+}
+
+.yui-what-is {
+  height: 50vh;
+  width: 100%;
+  background-color: #E14658;
+  z-index: 10;
+}
+
+.yui-info {
+  display: flex;
+}
+
+.item {
+  height: 50vh;
+  width: 50%;
+}
+
+/*#yui-about {
+  background-color: rgb(0, 167, 238);
+  border: 5px #E14658 solid;
+  border-radius: 10px;
+}
+
+#yui-contact {
+  background-color: #E14658;
+  border: 5px rgb(0, 167, 238) solid;
+  border-radius: 10px;
+
+}*/
+
+
+
 
 
 /*************
@@ -92,12 +163,16 @@ EXPLORE VIEW - PARALLAX HEADER
   height: 95vh;
   background-image: url("./images/magazine-table-min.jpeg");
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: top center;
   background-attachment: fixed;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.yui-logo {
+
+/*.yui-logo {
   height: 50vh;
   width: 100%;
   background-image: url("./images/yui-logo.svg");
@@ -107,22 +182,49 @@ EXPLORE VIEW - PARALLAX HEADER
   top: 40%;
   margin-top: -50px;
   z-index: 1;
+}*/
+
+.featured-image {
+  height: 70vh;
+  width: 35vw;
+  border: 5px rgb(17, 49, 144) solid;
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/35188833933094.56bd2a413eeaf.jpg");
+  background-size: cover;
 }
 
-/*.featured-text {
+.featured-text {
   height: 10vh;
-
+  width: auto;
   position: absolute;
-  left: 50%;
-  margin-left: -480px;
-  text-align: center;
-  top: 90%;
+  top: 30vh;
+  left: 15vw;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   letter-spacing: 3px;
-  color: black;
+  color: rgb(237, 236, 226);
   z-index: 0;
-}*/
+}
+
+.featured-work-link a{
+  font-family: 'Poppins', sans-serif;
+  border: 3px rgb(237, 236, 226) solid;
+  color: rgb(237, 236, 226);
+  padding: 5px;
+  cursor: crosshair;
+}
+
+.featured-work-link a:hover {
+  text-decoration: none;
+  color: rgb(237, 236, 226);
+}
+
+.featured-work-link-container {
+  height: 10vh;
+  width: auto;
+  position: absolute;
+  top: 55vh;
+  left: 58vw;
+}
 
 /*************
 
@@ -275,7 +377,7 @@ POST VIEW
 #post-btn:before {
   position: absolute;
   content: "";
-  background: url("./images/yui-logo.svg") no-repeat center center;
+  background: url(http://f.cl.ly/items/3H3A0D1N281a2T280F3o/heist.svg) no-repeat center center;
   width: 100%;
   height: 100%;
   top: 0;
@@ -453,7 +555,7 @@ LOGIN VIEW
 #login-btn:before {
   position: absolute;
   content: "";
-  background: url("./images/yui-logo.svg") no-repeat center center;
+  background: url(http://f.cl.ly/items/3H3A0D1N281a2T280F3o/heist.svg) no-repeat center center;
   width: 100%;
   height: 100%;
   top: 0;
@@ -547,7 +649,7 @@ FIGURE THIS OUT 1 - MOVING LINES
 **************/
 
 
-body {
+/*body {
   background: #F4F5F9;
 }
 
@@ -655,7 +757,7 @@ body {
   to {
     transform: translate3d(53px, 0, 0);
   }
-}
+}*/
 
 /*************
 
@@ -663,48 +765,7 @@ FIGURE THIS OUT 2 - DANCING BLOCKS
 
 **************/
 
-.svg-container {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
-}
 
-.dancing-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#block {
-  position: relative;
-  box-sizing: border-box;
-  float: left;
-  margin: 0 10px 10px 0;
-  width: 12px;
-  height: 12px;
-  border-radius: 3px;
-  background: #FFF;
-}
-
-.block:nth-child(4n+1) { -webkit-animation: wave 2s ease .0s infinite; animation: wave 2s ease .0s infinite; }
-.block:nth-child(4n+2) { -webkit-animation: wave 2s ease .2s infinite; animation: wave 2s ease .2s infinite; }
-.block:nth-child(4n+3) { -webkit-animation: wave 2s ease .4s infinite; animation: wave 2s ease .4s infinite; }
-.block:nth-child(4n+4) { -webkit-animation: wave 2s ease .6s infinite; animation: wave 2s ease .6s infinite; margin-right: 0; }
-
-@-webkit-keyframes wave {
-  0%   { top: 0;     opacity: 1; }
-  50%  { top: 30px;  opacity: .2; }
-  100% { top: 0;     opacity: 1; }
-}
-
-@keyframes wave {
-  0%   { top: 0;     opacity: 1; }
-  50%  { top: 30px;  opacity: .2; }
-  100% { top: 0;     opacity: 1; }
-}
 
 /*************
 
