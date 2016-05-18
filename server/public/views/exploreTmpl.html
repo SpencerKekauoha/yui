@@ -1,5 +1,4 @@
 <header class ="featured-container">
-  <div class="yui-logo"></div>
   <div class="featured-image"></div>
   <h1 class="featured-text">FEATURED DESIGN</h1>
   <div class="featured-work-link-container">
@@ -8,7 +7,9 @@
 </header>
 <section>
   <div class="image-flow-container">
-    <div class="image-flow-wrap" ng-repeat="image in images" data-toggle="modal" data-target="#modal-1"><img class="image-flow" id="image-flow-parallax" ng-src="{{image.url}}" ng-click="readImageId(image)"></div>
+    <div class="image-flow-wrap" ng-repeat="image in images" data-toggle="modal" data-target="#modal-1">
+      <img class="image-flow" id="image-flow-parallax" ng-src="{{image.url}}" ng-click="readImageId(image)">
+    </div>
   </div>
 </section>
 <section>
@@ -33,7 +34,7 @@
              </div>
              <form class="" action="index.html" method="post">
                <fieldset>
-                 <!-- <legend>Design Info</legend> -->
+                 <legend>Design Info</legend>
                  <div class="modal-post-input-container">
                    <input class="modal-login-input" type="text" ng-model="selectedImage.url" placeholder="Update Url" ng-show="user._id === selectedImage.user._id">
                    <input class="modal-login-input" type="text" ng-model="selectedImage.author" placeholder="Update Designer" ng-show="user._id === selectedImage.user._id">

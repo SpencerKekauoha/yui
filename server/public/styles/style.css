@@ -1,6 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:700,300);
 
-
+html,body
+{
+    overflow-x: hidden;
+}
 /*************
 
 NAV
@@ -20,6 +23,10 @@ NAV
   justify-content: center;
   justify-content: space-around;
   margin: 3vh;
+}
+
+#nav-menu-item-yui {
+justify-content: flex-start;
 }
 
 .nav-link {
@@ -81,7 +88,7 @@ YUI VIEW
 
 .animation-container {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,7 +128,7 @@ YUI VIEW
 
 .yui-what-is {
   height: 50vh;
-  width: 100%;
+  width: 100vw;
   background-color: #E14658;
   z-index: 10;
 }
@@ -160,9 +167,9 @@ EXPLORE VIEW - PARALLAX HEADER
 
 .featured-container {
   position: relative;
-  height: 95vh;
+  height: 100vh;
+  width: 100vw;
   background-image: url("./images/featured-rose.jpg");
-  background: blur(5px);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -171,19 +178,6 @@ EXPLORE VIEW - PARALLAX HEADER
   justify-content: center;
   align-items: center;
 }
-
-
-/*.yui-logo {
-  height: 50vh;
-  width: 100%;
-  background-image: url("./images/yui-logo.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 40%;
-  margin-top: -50px;
-  z-index: 1;
-}*/
 
 .featured-image {
   height: 70vh;
@@ -233,6 +227,10 @@ EXPLORE VIEW
 **************/
 
 .image-flow-container {
+  height: 100%;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -242,6 +240,7 @@ EXPLORE VIEW
 
 .image-flow {
   height: 35vh;
+  width: auto;
   margin: 0;
   padding: 0;
   margin-bottom: 0;
@@ -417,6 +416,13 @@ POST VIEW
 POST VIEW - MODAL
 
 **************/
+
+/*.post-container {
+  max-height: 100vh;
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+}*/
 
 .post-btn {
   position: relative;
