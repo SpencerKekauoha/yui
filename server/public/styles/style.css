@@ -15,7 +15,7 @@ NAV
   opacity: .7;
   position: fixed;
   width: 100vw;
-  z-index: 2;
+  z-index: 11;
 }
 
 .site-nav {
@@ -92,7 +92,7 @@ YUI VIEW
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #000;
+  background-color: #fff;
 }
 
 .dancing-container {
@@ -122,39 +122,39 @@ YUI VIEW
   100% { top: 0;     opacity: 1; }
 }
 
-.yui-what-is-container {
-  display: flex;
+.dancing-container {
+  z-index: 2;
 }
 
-.yui-what-is {
-  height: 50vh;
+.yui-info-container {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.yui-welcome-container {
+  height: 100vh;
   width: 100vw;
-  background-color: #E14658;
-  z-index: 10;
-}
-
-.yui-info {
   display: flex;
+  justify-content: center;
 }
 
-.item {
-  height: 50vh;
-  width: 50%;
+.yui-welcome-box {
+  height: 65vh;
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(82, 82, 82);
+  z-index: 3;
 }
 
-/*#yui-about {
-  background-color: #00A7EE;
-  border: 5px #E14658 solid;
-  border-radius: 10px;
+.yui-welcome-box h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 60vh;
+  letter-spacing: 1vw;
+  font-weight: bold;
+  color: #fff;
 }
-
-#yui-contact {
-  background-color: #E14658;
-  border: 5px #00A7EE solid;
-  border-radius: 10px;
-
-}*/
-
 
 
 
@@ -333,6 +333,10 @@ height: 5vh;
 POST VIEW
 
 **************/
+
+.post-container {
+
+}
 
 .modal-post-btn-container {
   display: flex;
@@ -867,5 +871,4 @@ body {
   justify-content: center;
   height: 50vh;
   color: blue;
-  width: 50vw;
 }
