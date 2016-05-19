@@ -88,7 +88,7 @@ YUI VIEW
 
 .yui-view-container {
   background-color: #000;
-  background-image: url("./images/graphy-dark.png");
+  background-image: url("./images/cartographer.png");
 }
 
 .animation-container {
@@ -179,6 +179,7 @@ YUI VIEW
   font-size: 6vh;
   letter-spacing: 1vw;
   font-weight: 700;
+  color: #fff;
 }
 
 .yui-info-container {
@@ -193,7 +194,8 @@ YUI VIEW
   margin-right: -25vw;
   display: flex;
   justify-content: center;
-  background-color: #fff;
+  background-image: url("./images/smoke.jpeg");
+  background-size: cover;
   z-index: 3;
   display: flex;
   justify-content: center;
@@ -206,8 +208,10 @@ YUI VIEW
   margin: 4vh;
   margin-left: 28vw;
   font-family: 'Poppins', sans-serif;
-  font-size: 12px;
+  font-size: 15px;
+  font-weight: 400;
   letter-spacing: 1px;
+  color: #fff;
   text-align: center;
 }
 
@@ -223,9 +227,9 @@ YUI VIEW
   left: 10vw;
   display: flex;
   justify-content: center;
-  background-color: #488FCD;
+  background-image: url("./images/waterfall-1.jpeg");
+  background-size: cover;
   margin-left: 20px;
-  border-radius: 5px;
   z-index: 3;
 }
 
@@ -242,9 +246,9 @@ YUI VIEW
   left: 10vw;
   display: flex;
   justify-content: center;
-  background-color: #F7EC20;
+  background-image: url("./images/waterfall-2.jpeg");
+  background-size: cover;
   margin-left: 20px;
-  border-radius: 5px;
   z-index: 1;
 }
 
@@ -260,9 +264,9 @@ YUI VIEW
   left: 10vw;
   display: flex;
   justify-content: center;
-  background-color: #E14658;
+  background-image: url("./images/waterfall-3.jpeg");
+  background-size: cover;
   margin-left: 20px;
-  border-radius: 5px;
   z-index: 3;
 }
 
@@ -279,9 +283,9 @@ YUI VIEW
   left: 10vw;
   display: flex;
   justify-content: center;
-  background-color: #A83E97;
+  background-image: url("./images/waterfall-4.jpeg");
+  background-size: cover;
   margin-left: 20px;
-  border-radius: 5px;
   z-index: 1;
 }
 
@@ -294,17 +298,62 @@ YUI VIEW
   height: 50vh;
   width: 70vw;
   margin: 5vh;
-  margin-right: 25vw;
+  margin-right: 0vw;
   left: 10vw;
   display: flex;
   justify-content: center;
-  background-color: #000;
   margin-left: 20px;
-  border-radius: 5px;
-  z-index: 1;
+  z-index: 3;
 }
 
+.yui-border-box-e-info {
+  height: 50vh;
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+}
 
+.yui-border-box-e-info p {
+  height: 50vh;
+  width: 40vw;
+  margin: 15vh;
+  margin-left: -10vh;
+  padding: 10vh;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #fff;
+}
+
+.cube-container {
+  display: flex;
+  justify-content: center;
+}
+
+.cube {
+  display: flex;
+  justify-content: center;
+  z-index: 3;
+}
+
+.yui-footer-container {
+  display: flex;
+  justify-content: center;
+}
+
+.yui-footer-box {
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-image: url("./images/graphy-dark.png");
+  background-color: #000;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+}
 
 
 /*************

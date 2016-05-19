@@ -34,14 +34,16 @@ $(window).scroll(function(){
     'transform': 'translate(0px, -'+ winScroll /2 +'%)'
   });
 
+  $('.yui-info-box-sm').css({
+    'transform': 'translate(0px, -'+ winScroll /20 +'%)'
+  });
+
   $('.yui-info-box').css({
-    'transform': 'translate(0px, '+ winScroll /100 +'%)'
+    'transform': 'translate(0px, '+ winScroll /150 +'%)'
   });
 
 
-  $('.yui-info-box-text-sm').css({
-    'transform': 'translate(0px, -'+ winScroll /2 +'%)'
-  });
+
 
 
 
