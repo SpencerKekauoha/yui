@@ -424,7 +424,7 @@ EXPLORE VIEW - PARALLAX HEADER
 
 .featured-work-link a:hover {
   text-decoration: none;
-  color: rgb(212, 212, 212);
+  color: #D4D4D4;
 }
 
 .featured-work-link-container {
@@ -863,7 +863,7 @@ legend {
 }
 
 ::-webkit-input-placeholder {
-   color: rgb(85, 85, 85);
+   color: #555555;
 }
 
 .modal-post-button-container {
@@ -884,7 +884,7 @@ FIGURE THIS OUT 1 - MOVING LINES
 **************/
 
 
-/*body {
+body {
   background: #F4F5F9;
 }
 
@@ -992,13 +992,7 @@ FIGURE THIS OUT 1 - MOVING LINES
   to {
     transform: translate3d(53px, 0, 0);
   }
-}*/
-
-/*************
-
-FIGURE THIS OUT 2 - DANCING BLOCKS
-
-**************/
+}
 
 
 
@@ -1090,8 +1084,19 @@ body {
 
 /*SHOW USER*/
 
-.practice {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  height: 10vh;
+
+/*************
+
+HEY YOU GUYS!
+
+**************/
+
+.directive-btn {
+  background-color: transparent;
+  border: transparent;
+  color: transparent;
+}
+
+.directive-btn:hover {
+  color: #00BAC6;
+}

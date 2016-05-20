@@ -42,10 +42,7 @@ $(window).scroll(function(){
     'transform': 'translate(0px, '+ winScroll /150 +'%)'
   });
 
-
-
-
-
+// EXPLORE IMAGE SLIDE //
 
   if(winScroll > $('.image-flow-container').offset().top - ($(window).height() / 2)) {
     $('.image-flow').each(function(i){
