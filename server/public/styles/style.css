@@ -142,10 +142,9 @@ YUI VIEW
 
 .yui-welcome-box {
   height: 65vh;
-  width: 80vw;
+  width: auto;
   display: flex;
   justify-content: center;
-  background-color: rgb(82, 82, 82);
   z-index: 3;
 }
 
@@ -204,11 +203,16 @@ YUI VIEW
 .yui-info-box p {
   height: 40vh;
   width: 40vw;
-  border: 2px #000 solid;
+  border: 5px #fff solid;
   margin: 4vh;
+  margin-top: 5vh;
+  margin-right: 1vh;
   margin-left: 28vw;
+  padding-top: 8vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
   font-family: 'Poppins', sans-serif;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 400;
   letter-spacing: 1px;
   color: #fff;
@@ -320,7 +324,7 @@ YUI VIEW
   margin-left: -10vh;
   padding: 10vh;
   font-family: 'Poppins', sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 400;
   letter-spacing: 1px;
   text-align: center;
@@ -349,13 +353,24 @@ YUI VIEW
 
 .yui-footer-box {
   height: 25vh;
-  width: 100vw;
+  width: 75vw;
   display: flex;
   justify-content: center;
-  background-color: #000;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
   z-index: 3;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.yui-footer-box a {
+  height: 10vh;
+  width: 20vh;
+  margin-bottom: 1vh;
+  border: 3px solid #fff;
 }
 
 /*************
