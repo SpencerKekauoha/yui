@@ -327,15 +327,19 @@ YUI VIEW
   color: #fff;
 }
 
-.cube-container {
+.yui-logo-hide-container {
   display: flex;
   justify-content: center;
 }
 
-.cube {
-  display: flex;
-  justify-content: center;
-  z-index: 3;
+.yui-logo-hide-box {
+  height: 65vh;
+  width: 75vw;
+  margin-top: 5vh;
+  margin-bottom: 15vh;
+  background-image: url("./images/star-clouds.jpeg");
+  background-size: cover;
+  z-index: 1;
 }
 
 .yui-footer-container {
@@ -344,17 +348,15 @@ YUI VIEW
 }
 
 .yui-footer-box {
-  height: 50vh;
+  height: 25vh;
   width: 100vw;
   display: flex;
   justify-content: center;
-  background-image: url("./images/graphy-dark.png");
   background-color: #000;
   z-index: 3;
   display: flex;
   justify-content: center;
 }
-
 
 /*************
 
