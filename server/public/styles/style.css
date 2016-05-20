@@ -994,97 +994,6 @@ body {
   }
 }
 
-
-
-/*************
-
-FIGURE THIS OUT 3 - Squiggly Circles
-
-**************/
-
-/*body, html {
-  position: relative;
-  height: 100%;
-}
-
-body {
-  background-color: #D81D3B;
-}
-
-.svg-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 7em;
-  height: 7em;
-  -webkit-transform: translate3d(-50%, -50%, 0);
-          transform: translate3d(-50%, -50%, 0);
-}
-
-.svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-animation: spin 6s linear infinite;
-          animation: spin 6s linear infinite;
-}
-
-.symbol {
-  fill: transparent;
-  stroke: #E14658;
-  stroke-width: 20px;
-  stroke-dasharray: 1600;
-  stroke-miterlimit: 10;
-  stroke-dashoffset: 1600;
-  -webkit-animation: dash 3s linear infinite;
-          animation: dash 3s linear infinite;
-}
-
-@-webkit-keyframes dash {
-  from {
-    stroke-dashoffset: 1600;
-  }
-  to {
-    stroke-dashoffset: -1600;
-  }
-}
-
-@keyframes dash {
-  from {
-    stroke-dashoffset: 1600;
-  }
-  to {
-    stroke-dashoffset: -1600;
-  }
-}
-@-webkit-keyframes spin {
-  from {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
-}
-@keyframes spin {
-  from {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
-}*/
-
-/*SHOW USER*/
-
-
 /*************
 
 HEY YOU GUYS!
@@ -1098,5 +1007,15 @@ HEY YOU GUYS!
 }
 
 .directive-btn:hover {
+  color: #00BAC6;
+}
+
+.directive-back-btn {
+  background-color: transparent;
+  border: transparent;
+  color: transparent;
+}
+
+.directive-back-btn:hover {
   color: #00BAC6;
 }
