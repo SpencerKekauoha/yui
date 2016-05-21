@@ -2,7 +2,7 @@
     <div class="featured-image"></div>
   <h1 class="featured-text">FEATURED DESIGN</h1>
   <div class="featured-work-link-container">
-    <h2 class="featured-work-link"><a href="https://www.behance.net/thewhitedeer">View Work</a></h2>
+    <h2 class="featured-work-link"><a id="featured-link" href="https://www.behance.net/thewhitedeer">View Work</a></h2>
   </div>
 </header>
 <section>
@@ -46,7 +46,7 @@
                  </div>
                </fieldset>
              </form>
-             <div class="modal-footer">
+             <div class="modal-footer" id="modal-responsive">
                 <div class="modal-footer-update">
                   <button id="post-modal-btn" class="post-btn" ng-click="updateImage(selectedImage)" data-toggle="modal" data-target="#modal-1" ng-show="user._id === selectedImage.user._id">Update </button>
                   <button id="post-modal-btn" class="post-btn" ng-click="deleteImage(selectedImage)" data-toggle="modal" data-target="#modal-1" ng-show="user._id === selectedImage.user._id">Delete</button>

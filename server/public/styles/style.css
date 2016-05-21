@@ -368,6 +368,7 @@ YUI VIEW
   letter-spacing: 1px;
   text-align: center;
   color: #fff;
+  z-index: 3;
 }
 
 @media only screen and (max-device-width:480px) {
@@ -376,6 +377,7 @@ YUI VIEW
     display: flex;
     justify-content: center;
     margin-left: 10vh;
+    margin-top: 12vh;
   }
 }
 
@@ -449,6 +451,13 @@ EXPLORE VIEW - PARALLAX HEADER
   border: 5px #000 solid;
 }
 
+@media only screen and (max-device-width:480px) {
+  .featured-image {
+    background: none;
+    border: none;
+  }
+}
+
 .featured-text {
   height: 10vh;
   width: auto;
@@ -462,12 +471,29 @@ EXPLORE VIEW - PARALLAX HEADER
   z-index: 0;
 }
 
+@media only screen and (max-device-width:480px) {
+  .featured-text {
+    background: none;
+    border: none;
+    text-align: center;
+    margin-left: -10vw;
+  }
+}
+
 .featured-work-link a{
   font-family: 'Poppins', sans-serif;
   border: 3px #fff solid;
   color: #fff;
   padding: 5px;
   cursor: crosshair;
+}
+
+@media only screen and (max-device-width:480px) {
+  #featured-link {
+    background: none;
+    border: none;
+    margin-left: -30vw;
+  }
 }
 
 .featured-work-link a:hover {
@@ -570,9 +596,14 @@ EXPLORE VIEW - MODAL
 
 .modal-footer {
   height: 20vh;
+  padding: 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+#modal-responsive {
+  padding: 0;
 }
 
 .modal-footer-update {
