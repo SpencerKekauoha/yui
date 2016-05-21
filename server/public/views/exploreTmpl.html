@@ -14,27 +14,26 @@
 </section>
 <section>
   <div class="container">
-      <div class="modal fade" id="modal-1">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h3 class="modal-title" id="modal-image-title">{{selectedImage.title}}</h3>
-             </div>
-             <div class="modal-image-container">
-               <img class="modal-image" src="{{selectedImage.url}}"/>
-             </div>
-             <div class="modal-body" id="modal-image-body">
+    <div class="modal fade" id="modal-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3 class="modal-title" id="modal-image-title">{{selectedImage.title}}</h3>
+          </div>
+          <div class="modal-image-container">
+            <img class="modal-image" src="{{selectedImage.url}}"/>
+          </div>
+            <div class="modal-body" id="modal-image-body">
               Designer: {{selectedImage.author}}
               </br>
               Published By: {{selectedImage.user.name}}
-             </div>
-             <div class="modal-likes-container">
-               <a ng-click="likeClick(selectedImage)"><img class="modal-footer-icons" src="./styles/images/heart.svg" alt="" /> {{selectedImage.likes.length}} Likes</a>
-             </div>
+            </div>
+            <div class="modal-likes-container">
+              <a ng-click="likeClick(selectedImage)"><img class="modal-footer-icons" src="./styles/images/heart.svg" alt="" /> {{selectedImage.likes.length}} Likes</a>
+            </div>
              <form class="" action="index.html" method="post">
                <fieldset>
-                 <!-- <legend>Design Info</legend> -->
                  <div class="modal-post-input-container">
                    <input class="modal-login-input" type="text" ng-model="selectedImage.url" placeholder="Update Url" ng-show="user._id === selectedImage.user._id">
                    <input class="modal-login-input" type="text" ng-model="selectedImage.author" placeholder="Update Designer" ng-show="user._id === selectedImage.user._id">
@@ -46,20 +45,22 @@
                  </div>
                </fieldset>
              </form>
-             <div class="modal-footer" id="modal-responsive">
+             <div class="modal-footer">
                 <div class="modal-footer-update">
                   <button id="post-modal-btn" class="post-btn" ng-click="updateImage(selectedImage)" data-toggle="modal" data-target="#modal-1" ng-show="user._id === selectedImage.user._id">Update </button>
                   <button id="post-modal-btn" class="post-btn" ng-click="deleteImage(selectedImage)" data-toggle="modal" data-target="#modal-1" ng-show="user._id === selectedImage.user._id">Delete</button>
                 </div>
-                <div>
-                  Contact Me: <a href="{{selectedImage.behance}}"><img class="modal-footer-icons" src="./styles/images/behance-icon.svg" alt="" /></a>
-                  <a href="{{selectedImage.linkedin}}"><img class="modal-footer-icons" src="./styles/images/linkedin-icon.svg" alt="" /></a>
-                  <a href="{{selectedImage.facebook}}"><img class="modal-footer-icons" src="./styles/images/facebook-icon.svg" alt="" /></a>
-                  <a href="{{selectedImage.website}}"><img class="modal-footer-icons" src="./styles/images/world.svg" alt="" /></a>
+              </div>
+                <div class="modal-footer" id="modal-responsive-contacts">
+                  <div> Contact Me:
+                    <a href="{{selectedImage.behance}}"><img class="modal-footer-icons" src="./styles/images/behance-icon.svg" alt="" /></a>
+                    <a href="{{selectedImage.linkedin}}"><img class="modal-footer-icons" src="./styles/images/linkedin-icon.svg" alt="" /></a>
+                    <a href="{{selectedImage.facebook}}"><img class="modal-footer-icons" src="./styles/images/facebook-icon.svg" alt="" /></a>
+                    <a href="{{selectedImage.website}}"><img class="modal-footer-icons" src="./styles/images/world.svg" alt="" /></a>
+                  </div>
                 </div>
-             </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
