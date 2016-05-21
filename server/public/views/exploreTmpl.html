@@ -45,8 +45,8 @@
                  </div>
                </fieldset>
              </form>
-             <div class="modal-footer">
-                <div class="modal-footer-update">
+             <div class="modal-footer" ng-show="user._id === selectedImage.user._id">
+                <div class="modal-footer-update" ng-show="user._id === selectedImage.user._id">
                   <button id="post-modal-btn" class="post-btn" ng-click="updateImage(selectedImage)" data-toggle="modal" data-target="#modal-1" ng-show="user._id === selectedImage.user._id">Update </button>
                   <button id="post-modal-btn" class="post-btn" ng-click="deleteImage(selectedImage)" data-toggle="modal" data-target="#modal-1" ng-show="user._id === selectedImage.user._id">Delete</button>
                 </div>
