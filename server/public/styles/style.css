@@ -99,7 +99,6 @@ YUI VIEW
   justify-content: center;
   background-color: #000;
   background-image: url("./images/cartographer.png");
-
 }
 
 .dancing-container {
@@ -107,6 +106,13 @@ YUI VIEW
   align-items: center;
   justify-content: center;
 }
+
+/*@media only screen and (max-device-width:480px) {
+  #Layer_1 {
+    height: 50vh;
+    width: auto;
+  }
+}*/
 
 .block.animate {
   animation-name: wave;
@@ -134,18 +140,45 @@ YUI VIEW
 }
 
 .yui-welcome-container {
-  height: 40vh;
-  width: 100vw;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
 }
 
 .yui-welcome-box {
-  height: 65vh;
+  height: 60vh;
   width: auto;
-  display: flex;
-  justify-content: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0;
   z-index: 3;
+}
+
+.yui-welcome-box img {
+  height: 45vh;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0;
+  z-index: 3;
+}
+
+@media only screen and (max-device-width:480px) {
+  #bad-crying-1 {
+    height: 20vh;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width:960px) {
+  #bad-crying-1 {
+    height: 60vh;
+    width: auto;
+  }
 }
 
 .yui-welcome-box h1 {
@@ -196,8 +229,6 @@ YUI VIEW
   background-image: url("./images/smoke.jpeg");
   background-size: cover;
   z-index: 3;
-  display: flex;
-  justify-content: center;
 }
 
 .yui-info-box p {
@@ -208,15 +239,20 @@ YUI VIEW
   margin-top: 5vh;
   margin-right: 1vh;
   margin-left: 28vw;
-  padding-top: 8vh;
+  padding-top: 2vh;
   padding-left: 2vw;
   padding-right: 2vw;
   font-family: 'Poppins', sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 400;
-  letter-spacing: 1px;
   color: #fff;
   text-align: center;
+}
+
+@media only screen and (max-device-width:480px) {
+  #sloth-text {
+    font-size: 10px;
+  }
 }
 
 .yui-border-container-a {
@@ -299,13 +335,16 @@ YUI VIEW
 }
 
 .yui-border-box-e {
+  display: flex;
+  justify-content: center;
+}
+
+.video {
   height: 50vh;
   width: 70vw;
   margin: 5vh;
   margin-right: 0vw;
   left: 10vw;
-  display: flex;
-  justify-content: center;
   margin-left: 20px;
   z-index: 3;
 }
@@ -329,6 +368,15 @@ YUI VIEW
   letter-spacing: 1px;
   text-align: center;
   color: #fff;
+}
+
+@media only screen and (max-device-width:480px) {
+  #bad-crying-text {
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    margin-left: 10vh;
+  }
 }
 
 .yui-logo-hide-container {
