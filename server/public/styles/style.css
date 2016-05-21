@@ -634,13 +634,6 @@ EXPLORE VIEW - MODAL
   flex-wrap: wrap;
 }
 
-@media only screen and (max-device-width:480px) {
-  # {
-    background: none;
-    margin-left: -30vw;
-  }
-}
-
 #modal-responsive-contacts {
 }
 
