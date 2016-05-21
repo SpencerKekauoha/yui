@@ -381,6 +381,39 @@ YUI VIEW
   }
 }
 
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px) {
+    #bad-crying-text {
+      font-size: 10px;
+      display: flex;
+      justify-content: center;
+      margin-left: 10vh;
+      margin-top: 10vh;
+  }
+}
+
+@media only screen
+  and (min-device-width: 480px)
+  and (max-device-width: 768px) {
+    #bad-crying-text {
+      font-size: 15px;
+      display: flex;
+      justify-content: center;
+      margin-top: 15vh;
+  }
+}
+
+@media only screen
+  and (min-device-width: 768px) {
+    #bad-crying-text {
+      font-size: 15px;
+      display: flex;
+      justify-content: center;
+      margin-top: 15vh;
+  }
+}
+
 .yui-logo-hide-container {
   display: flex;
   justify-content: center;
@@ -491,7 +524,6 @@ EXPLORE VIEW - PARALLAX HEADER
 @media only screen and (max-device-width:480px) {
   #featured-link {
     background: none;
-    border: none;
     margin-left: -30vw;
   }
 }
@@ -1097,4 +1129,12 @@ HEY YOU GUYS!
 
 .directive-back-btn:hover {
   color: #00BAC6;
+}
+
+.test {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  text-align: center;
+  color: white;
 }
