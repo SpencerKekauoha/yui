@@ -66,8 +66,4 @@ angular.module('yui').controller('mainCtrl', function($scope, mainService, $stat
     //     $scope.readImages();
     //   });
     // };
-
-
-
-
 });

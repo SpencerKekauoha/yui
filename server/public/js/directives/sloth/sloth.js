@@ -17,6 +17,8 @@ angular.module('yui').directive('changeCssDirective', function(){
         $('.yui-logo-hide-box').css('background', 'url(http://i.giphy.com/3P3cTP0ToLS6c.gif');
         $('.yui-view-container').css('background-color', 'pink');
         $('.animation-container').css('background-color', 'pink');
+        $('#audio').attr('src', './styles/images/sloth-sound.mp3');
+        $('#good').attr('src', './styles/images/good.mp3');
       });
     }
   };
