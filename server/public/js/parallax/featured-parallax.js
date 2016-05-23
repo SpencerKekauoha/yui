@@ -48,7 +48,7 @@ $(window).scroll(function(){
     $('.image-flow').each(function(i){
       setTimeout(function(){
         $('.image-flow').eq(i).addClass('is-showing');
-      }, 300 * (i+1));
+      }, 150 * (i+1));
     });
   }
 });
